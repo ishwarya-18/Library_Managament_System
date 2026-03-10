@@ -1,0 +1,219 @@
+/* Full-screen container */
+.librarys-search-container {
+    max-width: 100%;
+    height: auto; /* Full viewport height */
+    position: relative;
+    background-color: #f5f1e3;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+/* Center title */
+.librarys-search-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5a3e1b;
+    margin-bottom: 0px;
+    position: relative;
+    top: -10px;
+    left: -500px;
+}
+
+/* Subtitle styling */
+.library-subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5a3e1b;
+    margin-bottom: 20px;
+    position: relative;
+    left: 150px;
+}
+
+/* Search input */
+.search-input {
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 15px auto;
+    border: 1px solid #a58c66;
+    border-radius: 5px;
+    background: #fffdf3;
+    color: #3b2c1a;
+    font-size: 16px;
+    position: relative;
+    left: -360px;
+}
+
+/* Book list */
+.book-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Book items */
+.books-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin: 6px 0;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #3b2c1a;
+    width: 80%;
+    position: relative;
+    left: 280px;
+}
+
+/* Ensure text stays compact */
+.book-item strong {
+    display: inline-block;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Button styling */
+.borrow-button {
+    padding: 8px 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: auto;
+}
+
+.borrow-button:hover {
+    background-color: darkred;
+}
+
+/* Borrowed state button styling */
+.borrow-button.borrowed {
+    background-color: #d9534f;
+}
+
+.borrow-button.borrowed:hover {
+    background-color: #c9302c;
+}
+
+/* Pagination controls */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align items vertically */
+    margin-top: 20px;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    background-color: #6b4226;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100px;
+}
+
+.pagination button:disabled {
+    background-color: #b8b8b8;
+    cursor: not-allowed;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Center the container */
+    .library-search-container {
+        padding: 15px;
+    }
+
+    /* Adjust title font size and remove left positioning */
+    .library-search-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    /* Adjust subtitle styling */
+    .library-subtitle {
+        font-size: 18px;
+        margin-bottom: 10px;
+        position: relative;
+        left: 0;
+        text-align: center;
+    }
+
+    /* Adjust search input width and remove left positioning */
+    .search-input {
+        width: 90%;
+        left: 0;
+        margin: 15px auto;
+    }
+
+    /* Adjust book items width and position */
+    .book-item {
+        font-size: 14px;
+        width: 100%;
+        left: 0;
+    }
+
+    /* Adjust button font size and padding */
+    .borrow-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    /* Adjust pagination button font size and padding */
+    .pagination button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjust padding and text for small screens */
+    .library-search-container {
+        padding: 10px;
+    }
+
+    .library-search-title {
+        font-size: 18px;
+    }
+
+    .library-subtitle {
+        font-size: 16px;
+    }
+
+    .search-input {
+        width: 95%;
+    }
+
+    .book-item {
+        font-size: 12px;
+    }
+
+    .borrow-button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    .pagination button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+}

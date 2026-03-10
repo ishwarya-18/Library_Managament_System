@@ -1,0 +1,73 @@
+/* General Layout */
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f1e3; /* Same as library-container */
+}
+
+.admin-navbar {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 15px; /* Adds spacing between buttons */
+    padding: 10px 0;
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.admin-navbar button.active {
+    background-color: #6b4226; /* Darker shade on hover/active */
+}
+
+.admin-navbar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #a58c66;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.admin-navbar button:hover {
+    background-color: #6b4226;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .admin-navbar {
+        gap: 10px; /* Reduce gap between buttons on medium screens */
+}
+
+    .admin-navbar button {
+        font-size: 14px;
+        padding: 8px 14px;
+}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-navbar {
+        flex-direction: column;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .admin-navbar button {
+        font-size: 14px;
+        padding: 10px 15px; /* Adjust padding for better touch targets */
+        width: 100%; /* Make buttons full-width */
+        margin: 5px 0; /* Add spacing between buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-navbar button {
+        font-size: 12px;
+        padding: 8px 12px; /* Adjust padding for smaller screens */
+        width: 100%; /* Full-width buttons on very small screens */
+    }
+}

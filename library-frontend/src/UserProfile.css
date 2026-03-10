@@ -1,0 +1,92 @@
+/* Apply background color to the body */
+body {
+  background-color: #f5f1e3;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* User profile container */
+.user-profile-container {
+  max-width: 100%;
+  height: auto;
+  background-color: transparent; /* Remove background color here */
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* User profile heading */
+.user-profile-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5a3e1b;
+  margin-bottom: 15px;
+  margin-left: -1020px;
+  background-color: #f5f1e3;
+  min-height: 230px;
+  height: auto;
+}
+
+/* User details styling */
+.user-profile-container p {
+  font-size: 16px;
+  color: #3b2c1a;
+  margin: 10px 0;
+  margin-left: -575px;
+  position: relative;
+  top: -200px;
+}
+
+/* Learned Books section */
+.user-profile-container h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5a3e1b;
+  margin-top: -170px;
+  margin-left: -1005px;
+}
+
+/* Learned Books list */
+.user-profile-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+}
+
+.user-profile-container li {
+  background: white;
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #3b2c1a;
+}
+/* Ensure the parent container is relatively positioned */
+.user-profile-container {
+  position: relative;
+}
+
+/* Fix the logout button position */
+.custom-logout-button {
+  position: absolute;
+  background-color: #a58c66;
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 6px;
+  width: 6%;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  top: 170px; /* Adjust the top position */
+  right: 170px; /* Keep it fixed at the top-right */
+}
+
+.custom-logout-button:hover {
+  background-color: #6b4226;
+}

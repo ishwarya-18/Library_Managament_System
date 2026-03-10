@@ -1,0 +1,259 @@
+/* Full-screen container */
+.library-container {
+    max-width: 100%;
+    height: auto; /* Full viewport height */
+    position: relative;
+    background-color: #f5f1e3;
+    border-radius: 8px;
+}
+
+/* Ensure body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* Prevent double scroll */
+    overflow: auto;
+}
+/* Move book list slightly to the left */
+.admin-add-book-form h3 {
+    margin-left: 20px; /* Adjust this value as needed */
+  }
+  /* Move book list slightly to the left */
+.book-list {
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    transform: translateX(-130px); /* Adjust the value as needed */
+}
+
+.book-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin: 6px 0;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #3b2c1a;
+    gap: 10px;
+    margin-left: 150px;
+    width: 100%; /* Increased width */
+    max-width: 960px; /* Set a reasonable max width */
+}
+/* Center title */
+.library-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #5a3e1b;
+}
+/* Subtitle styling */
+.library-subtitles {
+    font-size: 20px;
+    margin-left: 2
+    0px;
+    font-weight: bold;
+    color: #5a3e1b;
+    margin-bottom: 20px;
+}
+
+.empty-message {
+    position: relative;
+    left: 10px;
+}
+
+/* Book form styles */
+.book-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Input fields */
+.library-input {
+    padding: 12px;
+    border: 1px solid #a58c66;
+    border-radius: 5px;
+    width: 45%;
+    background: #fffdf3;
+    color: #3b2c1a;
+    font-size: 16px;
+}
+
+/* Button styling */
+.library-button {
+    padding: 12px 15px;
+    width: 96%;
+    background-color: #6b4226;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.library-button:hover {
+    background-color: #4d2f1a;
+}
+
+/* Scrollable book list */
+.book-list {
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Ensure text stays compact */
+.book-item strong {
+    display: inline-block;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 6px 0px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 10%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c9302c;
+}
+
+/* Success & Error Messages */
+.success-message {
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: #d9534f;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+    .library-container {
+        padding: 30px;
+    }
+
+    .library-title {
+        font-size: 24px;
+    }
+
+    .library-subtitle {
+        font-size: 22px;
+    }
+
+    .library-input {
+        width: 95%;
+    }
+
+    .library-button {
+        width: 98%;
+    }
+
+    .book-item {
+        font-size: 15px;
+    }
+}
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+    .library-container {
+        padding: 30px;
+    }
+
+    .library-title {
+        font-size: 22px;
+    }
+
+    .library-subtitle {
+        font-size: 20px;
+    }
+
+    /* Stack form inputs on small screens */
+    .book-form {
+        flex-direction: column;
+    }
+
+    .library-input {
+        width: 95%;
+    }
+
+    .library-button {
+        width: 99%;
+    }
+
+    /* Adjust book item layout */
+    .book-item {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    /* Make text more readable on small screens */
+    .book-item strong {
+        max-width: 70%;
+        font-size: 14px;
+    }
+
+    /* Resize delete button */
+    .delete-button {
+        font-size: 13px;
+        padding: 6px 10px;
+        width: auto;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .library-title {
+        font-size: 20px;
+    }
+
+    .library-subtitle {
+        font-size: 14px;
+    }
+
+    .book-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .book-item strong {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .delete-button {
+        font-size: 12px;
+        padding: 5px 8px;
+        width: auto;
+    }
+}

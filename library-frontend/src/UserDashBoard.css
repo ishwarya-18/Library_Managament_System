@@ -1,0 +1,187 @@
+/* General Layout */
+.user-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f1e3; /* Same as admin-dashboard */
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Dark text for readability */
+    margin-bottom: 20px;
+}
+
+/* Navbar */
+.user-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.user-navbar button.active {
+    background-color: #6b4226; /* Darker shade on hover/active */
+}
+
+.user-navbar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #a58c66; /* Light brown button background */
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.user-navbar button:hover {
+    background-color: #6b4226; /* Darker brown on hover */
+}
+
+/* Content Area */
+.user-content {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Available Books Section */
+.book-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.book-item {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Buttons for Borrow/Return */
+.borrow-button,
+.return-button {
+    background-color: #28a745; /* Green for borrow/return actions */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.borrow-button:hover,
+.return-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Empty Message for No Books */
+.empty-message {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Borrowed Books Section */
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.return-button {
+    background-color: #dc3545; /* Red for return action */
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* User Profile Section */
+.user-profile {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+}
+
+.user-profile p {
+    font-size: 16px;
+    color: #333; /* Dark text color */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .user-navbar {
+        gap: 10px; /* Reduce gap between buttons on medium screens */
+    }
+
+    .user-navbar button {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    .book-item {
+        font-size: 14px;
+    }
+
+    .borrow-button,
+    .return-button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-navbar {
+        flex-direction: column;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .user-navbar button {
+        font-size: 14px;
+        padding: 10px 15px;
+        width: 100%; /* Full width for buttons */
+        margin: 5px 0; /* Space between buttons */
+    }
+
+    .book-item {
+        font-size: 14px;
+    }
+
+    .borrow-button,
+    .return-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-navbar button {
+        font-size: 12px;
+        padding: 8px 12px;
+        width: 100%; /* Full-width buttons on very small screens */
+    }
+
+    .book-item {
+        font-size: 12px;
+    }
+
+    .borrow-button,
+    .return-button {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+}
